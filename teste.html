@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botão com Ícones</title>
+<style>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+#button {
+    width: 100px;
+    height: 50px;
+    background-color: #00c853;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: #00796b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Posicionamento inicial dos ícones */
+.icon1 { top: 0; left: 0; transform: translate(-50%, -50%); }
+.icon2 { top: 0; right: 0; transform: translate(50%, -50%); }
+.icon3 { bottom: 0; left: 0; transform: translate(-50%, 50%); }
+.icon4 { bottom: 0; right: 0; transform: translate(50%, 50%); }
+
+/* Classes de animação quando o botão é clicado */
+.show-icons .icon1 { transform: translate(-150px, -150px); opacity: 1; }
+.show-icons .icon2 { transform: translate(150px, -150px); opacity: 1; }
+.show-icons .icon3 { transform: translate(-150px, 150px); opacity: 1; }
+.show-icons .icon4 { transform: translate(150px, 150px); opacity: 1; }
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Escolha como se divertir!</h1>
+    </div>
+
+    <div class="container">
+        <button id="button">Clique em mim!</button>
+        <div class="icon icon1">🎮</div>
+        <div class="icon icon2">🎶</div>
+        <div class="icon icon3">📚</div>
+        <div class="icon icon4">📺</div>
+    </div>
+
+<script>
+const button = document.getElementById("button");
+const container = document.querySelector(".container");
+
+button.addEventListener("click", () => {
+        container.classList.toggle("show-icons");
+});
+</script>
+
+</body>
+</html>

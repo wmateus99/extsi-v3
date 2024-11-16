@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Atividades</title>
+    <style>
+        :root {
+            --background-color: #ffffff;
+            --header-background-color: #00bf63;
+            --text-color: #000000;
+            --primary-color: #ffffff;
+            --secondary-color: #3b3b3b;
+            --card-background-color: #00bf63;
+            --hover-color: #000000;
+            --border-color: #000000;
+            --shadow-color: #00bf63;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        header {
+            background-color: var(--header-background-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 1.5em;
+            box-shadow: 0 4px 6px var(--shadow-color);
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            max-width: 1200px;
+            padding-top: 2em;
+        }
+        .filter-menu {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        .filter-menu select {
+            padding: 0.7em;
+            font-size: 1.1em;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            background-color: var(--header-background-color);
+            color: var(--text-color);
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+            margin-right: 10px;
+        }
+        .filter-menu select:hover {
+            border-color: var(--hover-color);
+        }
+        .activity-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5em;
+        }
+        .activity-item {
+            background-color: var(--card-background-color);
+            padding: 1.5em;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: none; /* Escondido por padrão */
+        }
+        .activity-item h3 {
+            margin-bottom: 1em;
+            color: var(--primary-color);
+        }
+        .activity-item a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: block;
+            margin: 0.5em 0;
+            transition: color 0.3s ease;
+        }
+        .activity-item a:hover {
+            color: var(--hover-color);
+        }
+        .activity-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px var(--shadow-color);
+        }
+        @media (max-width: 768px) {
+            .activity-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Atividades</h1>
+    </header>
+
+    <div class="container">
+        <div class="filter-menu">
+            <label for="filter">Filtrar por categoria:</label>
+            <select id="filter">
+                <option value="todos">Todos</option>
+                <option value="word">Word</option>
+                <option value="excel">Excel</option>
+                <option value="windows10">Windows 10</option>
+                <option value="powerpoint">PowerPoint</option>
+                <option value="outros">Outros</option>
+            </select>
+        </div>
+
+        <div class="activity-list" id="activityList">
+            <div class="activity-item" data-category="excel">
+                <h3>Planilha Simples (B) - Excel</h3>
+                <a href="ativs/exc/atividades_de_excel_(simples).pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/exc/atividades_de_excel_(simples).pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="excel">
+                <h3>Despesas/Ano (M) - Excel</h3>
+                <a href="ativs/exc/despesas_do_ano.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/exc/despesas_do_ano.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="excel">
+                <h3>Duas Planilhas (M) - Excel</h3>
+                <a href="ativs/exc/duas_planilhas_intermediarias.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/exc/duas_planilhas_intermediarias.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="excel">
+                <h3>Média de Alunos (M) - Excel</h3>
+                <a href="ativs/exc/media_de_alunos.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/exc/media_de_alunos.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="excel">
+                <h3>Nove Planilhas (A) - Excel</h3>
+                <a href="ativs/exc/nove_planilhas_avancadas.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/exc/nove_planilhas_avancadas.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="excel">
+                <h3>Planilhas/Controle (A) - Excel</h3>
+                <a href="ativs/exc/planilhas_de_controle.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/exc/planilhas_de_controle.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="excel">
+                <h3>Retiro (B) - Excel</h3>
+                <a href="ativs/exc/retiro.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/exc/retiro.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="excel">
+                <h3>Sete Planilhas (B) - Excel</h3>
+                <a href="ativs/exc/sete_planilhas_basicas.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/exc/sete_planilhas_basicas.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="excel">
+                <h3>Supermercado Central (A) - Excel</h3>
+                <a href="ativs/exc/supermercado_central.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/exc/supermercado_central.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="excel">
+                <h3>Uma Planilha (A) - Excel</h3>
+                <a href="ativs/exc/uma_planilha_avancada.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/exc/uma_planilha_avancada.pdf" download>Baixar PDF</a>
+            </div>
+
+            <!-- Divisão -->
+
+            <div class="activity-item" data-category="outros">
+                <h3>Guia de Medicamentos (M) - None</h3>
+                <a href="ativs/out/guia_de_medicamentos.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/out/guia_de_medicamentos.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="outros">
+                <h3>Atividade de Revisão (M) - None</h3>
+                <a href="ativs/out/atividade_de_revisao.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/out/atividade_de_revisao.pdf" download>Baixar PDF</a>
+            </div>
+
+            <!-- Divisão -->
+
+            <div class="activity-item" data-category="powerpoint">
+                <h3>Use Sua Criatividade (M) - PowerPoint</h3>
+                <a href="ativs/pwp/mostre_sua_criatividade.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/pwp/mostre_sua_criatividade.pdf" download>Baixar PDF</a>
+            </div>
+
+            <!-- Divisão -->
+            
+            <div class="activity-item" data-category="windows10">
+                <h3>Ilustrações (M) - Windows</h3>
+                <a href="ativs/win/lidando_com_ilustracoes.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/win/lidando_com_ilustracoes.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="windows10">
+                <h3>Atalhos/Teclado (B) - Windows</h3>
+                <a href="ativs/win/praticando_atalhos_do_teclado.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/win/praticando_atalhos_do_teclado.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="windows10">
+                <h3>Revisando/Assuntos (M) - Windows</h3>
+                <a href="ativs/win/revisanto_assuntos.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/win/revisanto_assuntos.pdf" download>Baixar PDF</a>
+            </div>
+            
+            <!-- Divisão -->
+
+            <div class="activity-item" data-category="word">
+                <h3>Evolução da Informática (A) - Word</h3>
+                <a href="ativs/wor/evolucao_da_informatica.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/wor/evolucao_da_informatica.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="word">
+                <h3>Fluxograma (M) - Word</h3>
+                <a href="ativs/wor/fluxograma.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/wor/fluxograma.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="word">
+                <h3>História da Internet (M) - Word</h3>
+                <a href="ativs/wor/historia_da_internet.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/wor/historia_da_internet.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="word">
+                <h3>Pesquisa (M) - Word</h3>
+                <a href="ativs/wor/pesquisando_e_praticando.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/wor/pesquisando_e_praticando.pdf" download>Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="word">
+                <h3>Revolução Digital (M) - Word</h3>
+                <a href="ativs/wor/revolucao_digital.pdf" target="_blank">Acessar PDF</a>
+                <a href="ativs/wor/revolucao_digital.pdf" download>Baixar PDF</a>
+            </div>
+            <!-- Adicione mais atividades aqui -->
+
+            <div class="activity-item" data-category="outros">
+                <h3>Como ligar o Computador - Vídeo</h3>
+                <a href="clc.html" target="_blank">Acessar</a>
+            </div>
+            <div class="activity-item" data-category="outros">
+                <h3>Usando Trello para Gerenciamento</h3>
+                <a href="./ativs/out/gerenciando_usando_trello.pdf" target="_blank">Acessar</a>
+                <a href="./ativs/out/gerenciando_usando_trello.pdf" target="_blank">Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="outros">
+                <h3>Relatorio Desempenho Vendas</h3>
+                <a href="./ativs/out/Relatorio_Desempenho_Vendas.pdf" target="_blank">Acessar</a>
+                <a href="./ativs/out/Relatorio_Desempenho_Vendas.pdf" target="_blank">Baixar PDF</a>
+            </div>
+            <div class="activity-item" data-category="outros">
+                <h3>Controle Financeiro Simples</h3>
+                <a href="./ativs/out/Controle_Financeiro_Simples.pdf" target="_blank">Acessar</a>
+                <a href="./ativs/out/Controle_Financeiro_Simples.pdf" target="_blank">Baixar PDF</a>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+    <script>
+        const filterMenu = document.getElementById('filter');
+        const activityItems = document.querySelectorAll('.activity-item');
+        const activityList = document.getElementById('activityList');
+
+        // Função para filtrar as atividades com base na categoria selecionada
+        function filterActivities(category) {
+            activityItems.forEach(item => {
+                if (category === 'todos' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Função para embaralhar as atividades
+        function shuffleActivities() {
+            const itemsArray = Array.from(activityItems);
+            itemsArray.sort(() => Math.random() - 0.5);
+            itemsArray.forEach(item => activityList.appendChild(item));
+        }
+
+        // Embaralha as atividades ao carregar a página
+        window.addEventListener('load', () => {
+            shuffleActivities();
+            filterActivities('todos');
+        });
+
+        // Evento de mudança no menu de filtro
+        filterMenu.addEventListener('change', (e) => {
+            filterActivities(e.target.value);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+
+
+.header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-voltar {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+}
+.icon-voltar img {
+    width: 50px;
+    cursor: pointer;
+}
+
+
+
+.menu-item {
+    width: 80%;
+    height: 50px;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    overflow: hidden;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: #00c160;
+}
+.menu-item:hover {
+    scale: 1.05;
+}
+
+
+
+
+
+@media screen and (min-width: 1050px) {
+    .menu-item {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .icon-voltar {
+        display: none;
+    }
+    .header h1 {
+        font-size: 26px;
+    }
+    .menu-item {
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+}

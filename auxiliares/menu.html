@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/submenus.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Digitação | Textos</title>
+</head>
+<body>
+    <div class="icon-voltar" id="IdIcon">
+        <img src="../../img/voltar.png" alt="">
+    </div>
+    <div class="header">
+        <h1>Axuliares - Arquivos</h1>
+    </div>
+
+    <div class="container">
+        <!-- Menu Essencial -->
+        <div class="menu-item" id="a01">
+            <h3>Windows</h3>
+        </div>
+        <div class="menu-item" id="a02">
+            <h3>Word</h3>
+        </div>
+        <div class="menu-item" id="a03">
+            <h3>Excel</h3>
+        </div>
+        <div class="menu-item" id="a04">
+            <h3>PowerPoint</h3>
+        </div>
+        <div class="menu-item" id="a05">
+            <h3>Power BI</h3>
+        </div>
+    </div>
+
+<script>
+    // Botão voltar
+    const clickableBack = document.getElementById('IdIcon');
+    clickableBack.addEventListener('click', function() {
+        window.location.href = '../index.html';
+    });
+
+    // Acessar PDF
+    const clickableWnd = document.getElementById('a01');
+    clickableWnd.addEventListener('click', function() {
+        window.location.href = 'https://drive.google.com/drive/folders/1auX1teIMz-w93ukfBx3dThOHE0qYT3Jt?usp=sharing';
+    });
+    const clickableWrd = document.getElementById('a02');
+    clickableWrd.addEventListener('click', function() {
+        window.location.href = 'https://drive.google.com/drive/folders/1orTIIsklzm4lXEiI6DgZE0_YEYfMr6G6?usp=sharing';
+    });
+    const clickableExl = document.getElementById('a03');
+    clickableExl.addEventListener('click', function() {
+        window.location.href = 'https://drive.google.com/drive/folders/1VhTV9ai9oc5mEQjhWFdhlYwVIKAHRy2a?usp=sharing';
+    });
+    const clickablePwp = document.getElementById('a04');
+    clickablePwp.addEventListener('click', function() {
+        window.location.href = 'https://drive.google.com/drive/folders/16sSFFiEBPa4eX7Ht6KucWDROcooAJAML?usp=sharing';
+    });
+    const clickablePwb = document.getElementById('a05');
+    clickablePwb.addEventListener('click', function() {
+        window.location.href = 'https://drive.google.com/drive/folders/1Jf9s7o3x7InDfYEcsx9Z68_bAgLvsZuO?usp=sharing';
+    });
+
+</script>
+</body>
+</html>

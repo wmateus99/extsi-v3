@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Comfortaa", sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .header {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header h1 {
+            /* margin-bottom: 20px; */
+        }
+
+
+    .icon-voltar {
+        top: 10px;
+        left: 10px;
+        position: absolute;
+    }
+    .icon-voltar img {
+        width: 50px;
+        cursor: pointer;
+    }
+
+
+    .menu-item {
+        width: 80%;
+        height: 50px;
+        color: #fff;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 20px;
+        overflow: hidden;
+        margin: 10px auto;
+        position: relative;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        background-color: #00c160;
+    }
+
+    .menu-item:hover {
+            height: 150px; /* Altura ao expandir para mostrar submenus */
+    }
+
+    .submenu-item {
+        background-color: white;
+        color: black;
+        font-size: 18px;
+        margin: 5px auto;
+        padding: 10px;
+        width: 70%;
+        border-radius: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Mostra os itens de submenu com transição suave */
+    .menu-item:hover .submenu-item {
+        opacity: 1;
+    }
+
+
+
+
+    @media screen and (min-width: 1050px) {
+        .menu-item {
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .icon-voltar {
+            display: none;
+        }
+        .header h1 {
+            font-size: 26px;
+        }
+        .menu-item {
+            height: 40px;
+        padding: 10px;
+            font-size: 16px;
+        }
+        .submenu-item {
+            font-size: 14px;
+            margin: 15px auto;
+            border-radius: 20px;
+        }
+    
+    }
+    </style>
+</head>
+<body>
+    <div class="icon-voltar" id="IdIcon">
+        <img src="../../img/voltar.png" alt="">
+    </div>
+
+    <div class="header">
+        <h1>EXCEL</h1>
+    </div>
+
+    <div class="container">
+        <!-- Menu Essencial -->
+        <div class="menu-item">Essencial
+            <div class="submenu-item" id="psEs">Passo a Passo</div>
+            <div class="submenu-item" id="fxEs">Fixação</div>
+        </div>
+
+        <!-- Menu Avançado -->
+        <div class="menu-item">Avançado
+            <div class="submenu-item" id="psAv">Passo a Passo</div>
+            <div class="submenu-item" id="fxAv">Fixação</div>
+        </div>
+
+        <!-- Menu Revisão -->
+        <div class="menu-item">Revisão
+            <div class="submenu-item" id="rvEs">Essencial</div>
+            <div class="submenu-item" id="rvAv">Avançado</div>
+        </div>
+    </div>
+
+<script>
+    // Botão voltar
+    const clickableBack = document.getElementById('IdIcon');
+    clickableBack.addEventListener('click', function() {
+        window.location.href = '../index.html';
+    });
+    // Acessar menus - Avançado
+    const clickableAvFx = document.getElementById('fxAv');
+    clickableAvFx.addEventListener('click', function() {
+        window.location.href = './avancado/fixacao.html';
+    });
+    
+    const clickableAvPs = document.getElementById('psAv');
+    clickableAvPs.addEventListener('click', function() {
+        window.location.href = './avancado/passo.html';
+    });
+
+    // Acessar menus - Essencial
+    const clickableEsFx = document.getElementById('fxEs');
+    clickableEsFx.addEventListener('click', function() {
+        window.location.href = './essencial/fixacao.html';
+    });
+    
+    const clickableEsPs = document.getElementById('psEs');
+    clickableEsPs.addEventListener('click', function() {
+        window.location.href = './essencial/passo.html';
+    });
+
+    // Acessar menus - Revisão
+    const clickableRvEs = document.getElementById('rvEs');
+    clickableRvEs.addEventListener('click', function() {
+        window.location.href = './revisao/essencial.html';
+    });
+    
+    const clickableRvAv = document.getElementById('rvAv');
+    clickableRvAv.addEventListener('click', function() {
+        window.location.href = './revisao/avancado.html';
+    });
+</script>
+</body>
+</html>

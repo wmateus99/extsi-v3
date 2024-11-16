@@ -1,0 +1,53 @@
+
+.mobile-container {
+    width: 100%;
+    display: none;
+}
+.menu-item {
+    width: 80%;
+    height: 50px;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    overflow: hidden;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: #00c160;
+}
+.menu-item:hover {
+    scale: 1.05;
+}
+
+
+
+
+
+@media screen and (min-width: 1050px) {
+    .menu-item {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .icon-voltar {
+        display: none;
+    }
+    .header h1 {
+        display: none;
+    }
+    .menu-item {
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .pc-conteiner {
+        display: none;
+    }
+    .mobile-container {
+        width: 100%;
+        display: block;
+    }
+}

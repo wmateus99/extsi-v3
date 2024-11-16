@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/submenus.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Excel | Avançado</title>
+</head>
+<body>
+    <div class="icon-voltar" id="IdIcon">
+        <img src="../../img/voltar.png" alt="">
+    </div>
+    <div class="header">
+        <h1>Passo - Avançado</h1>
+    </div>
+
+    <div class="container">
+        <!-- Menu Essencial -->
+        <div class="menu-item" id="a01">
+            <h3>Em Desenvolvimento</h3>
+        </div>
+    </div>
+
+<script>
+    // Botão voltar
+    const clickableBack = document.getElementById('IdIcon');
+    clickableBack.addEventListener('click', function() {
+        window.location.href = '../menu.html';
+    });
+
+    // Acessar PDF
+    const clickablePdf01 = document.getElementById('a01');
+    clickablePdf01.addEventListener('click', function() {
+        window.location.href = 'https://www.youtube.com/watch?v=_UY0Fg7z5Qk&t=400s';
+    });
+</script>
+</body>
+</html>
