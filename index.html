@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,8 +38,8 @@
                 </div>
             </div>
 
-            <div class="cards">
-                <div class="cardTop">
+            <div class="cards" id="CardJg">
+                <div class="cardTop" >
                     <img src="img/controle-de-video-game.png" alt="">
                 </div>
                 <div class="cardBottom">
@@ -83,7 +83,7 @@
             <div class="menu-item" id="CardDg1">
                 <h3>Digitação</h3>
             </div>
-            <div class="menu-item" id="">
+            <div class="menu-item" id="CardJg1">
                 <h3>Jogos</h3>
             </div>
             <div class="menu-item" id="CardAt1">
@@ -127,6 +127,17 @@
     });
     clickableCardDg1.addEventListener('click', function() {
         window.location.href = './digitacao/menu.html';
+    });
+
+    // Jogos
+    const clickableCardJg = document.getElementById('CardJg');
+    const clickableCardJg1 = document.getElementById('CardJg1');
+
+    clickableCardJg.addEventListener('click', function() {
+        window.location.href = './jogos/menu.html';
+    });
+    clickableCardJg1.addEventListener('click', function() {
+        window.location.href = './jogos/menu.html';
     });
 
     // Atividades

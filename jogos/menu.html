@@ -135,19 +135,19 @@
 
     <main>
         <section class="game-grid">
-            <div class="game-card">
+            <div class="game-card" id="gmDg">
                 <div class="game-icon">🎮</div>
                 <h3>Jodo de Digitação</h3>
             </div>
-            <div class="game-card">
+            <div class="game-card" id="gmMs">
                 <div class="game-icon">🎮</div>
                 <h3>Prática do Mouse</h3>
             </div>
-            <div class="game-card">
+            <div class="game-card" id="gmMm">
                 <div class="game-icon">🎮</div>
                 <h3>Jogo Da Memória</h3>
             </div>
-            <div class="game-card">
+            <div class="game-card" id="gmFc">
                 <div class="game-icon">🎮</div>
                 <h3>Jogo Forca</h3>
             </div>
@@ -155,6 +155,26 @@
     </main>
 
     <script>
+        // Jogo de Digitação
+        const clickableDg = document.getElementById('gmDg');
+        clickableDg.addEventListener('click', function() {
+        window.location.href = './game-typing/index.html';
+    });
+        // Jogo de Digitação
+        const clickableMs = document.getElementById('gmMs');
+        clickableMs.addEventListener('click', function() {
+        window.location.href = './game-mouse/index.html';
+    });
+        // Jogo de Digitação
+        const clickableMm = document.getElementById('gmMm');
+        clickableMm.addEventListener('click', function() {
+        window.location.href = './game-memory/index.html';
+    });
+        // Jogo de Digitação
+        const clickableFc = document.getElementById('gmFc');
+        clickableFc.addEventListener('click', function() {
+        window.location.href = './game-forca/index.html';
+    });
     </script>
 </body>
 </html>

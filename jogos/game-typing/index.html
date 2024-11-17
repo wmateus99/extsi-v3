@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Digitação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="box-display">
+        <!-- <h2>Ranking</h2> -->
+        <div class="players-wrapper">
+            <div class="players">
+                <div class="box-player">
+                    <span style="color: #FFD700;">Lanna Rafaella Oliveira Rodrigues chegou ao LV 100</span>
+                </div>
+                <div class="box-player">
+                    <span style="color: #C0C0C0;">Cauê Lima De Sousa chegou ao LV 61</span>
+                </div>
+                <div class="box-player">
+                    <span style="color: #C0C0C0;">Kildson Zidane Carvalho Andrade chegou ao LV 60</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="premio">
+            <p style="text-align: justify;">Valendo uma caixa de Bombom Garoto para os três primeiros que ultrapassarar o LV 60. [<span><a style="color: #c70455; font-style: italic;" href="./ranking/menu.html" target="_blank"> Ver Ranking </a></span>]</p>
+            <p style="font-style: italic; font-size: 10pt; color: #c9c9c9; text-align: center;">Válido de 10/10/2024 até 10/12/2024</p>
+    </div>
+    <div class="container">
+        <div class="sub-conteiner">
+            <h1>Jogo de Digitação</h1>
+            <div id="game-info">
+                <p><span class="sub-title">Pontuação:</span> <span id="score">0</span></p>
+                <p><span class="sub-title">Nível:</span> <span id="level">1</span></p>
+                <p><span class="sub-title">Próximo Nível:</span> <span id="goal">10 pontos</span></p>
+                <p id="timer"><span class="sub-title">Tempo:</span> 90s</p>
+            </div>
+            <div id="word-display" class="word-display"></div>
+            <input type="text" id="word-input" class="word-input" placeholder="Digite a palavra" autocomplete="off">
+            <div class="button-container">
+                <button id="start-button">Iniciar</button>
+                <button id="pause-button">Pausar</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
