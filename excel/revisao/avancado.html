@@ -7,126 +7,183 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Revisão | Avançado</title>
     <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
+<style>
+    :root {
+            --main-color: #02c362;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1F1F1F;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--main-color);
+        }
+        header h1 {
+            margin: 0;
+            color: var(--main-color);
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .activity {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #1E1E1E;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .activity h2 {
+            color: var(--main-color);
+            border-bottom: 1px solid var(--main-color);
+            padding-bottom: 10px;
+        }
+        .activity p {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1F1F1F;
+            border-top: 2px solid var(--main-color);
+        }
+        footer p {
+            margin: 0;
+            color: #757575;
+        }
+</style>
 </head>
 <body>
-    <div class="icon-voltar" id="IdIcon">
+    <!-- <div class="icon-voltar" id="IdIcon">
         <img src="../../img/voltar.png" alt="">
-    </div>
+    </div> -->
     <div class="header">
         <h1>Revisão - Avançado</h1>
     </div>
 
     <div class="container">
-        <!-- Menu -->
-        <div class="menu-item" id="a01">
-            <h3>Em Desenvolvimento</h3>
-        </div> <!--
-        <div class="menu-item" id="a02">
-            <h3>Aula 02</h3>
+
+        <!-- Aula 1 -->
+        <div class="activity">
+            <h2>Aula 1: Revisão de Fórmulas e Funções</h2>
+            <p><strong>1.</strong> Abra o Excel e crie uma planilha com as colunas: Produto, Quantidade Vendida, Preço Unitário e Receita Total.</p>
+            <p><strong>2.</strong> Insira os dados fictícios de 5 produtos: dê nomes aos produtos, como "Caneta", "Lápis", etc.; preencha as quantidades vendidas e os preços unitários.</p>
+            <p><strong>3.</strong> Na coluna Receita Total, use a fórmula <code>=Quantidade * Preço Unitário</code> para calcular o total de vendas por produto.</p>
+            <p><strong>4.</strong> Em uma célula separada, utilize a função <code>SOMA</code> para calcular o total geral das receitas.</p>
+            <p><strong>5.</strong> Crie células adicionais para calcular: <br>
+            • A receita média (<code>MÉDIA</code>), <br>
+            • O menor valor (<code>MÍNIMO</code>), <br>
+            • O maior valor (<code>MÁXIMO</code>).</p>
+            <p><strong>6.</strong> Adicione outra coluna chamada "Desconto". Utilize a função <code>SE</code> para aplicar um desconto de 10% nas receitas maiores que R$ 300. Fórmula sugerida: <code>=SE(Receita>Total, Receita*10%)</code>.</p>
         </div>
-        <div class="menu-item" id="a03">
-            <h3>Aula 03</h3>
+
+        <!-- Aula 2 -->
+        <div class="activity">
+            <h2>Aula 2: Funções de Texto</h2>
+            <p><strong>1.</strong> Monte uma planilha contendo os seguintes dados: Nome Completo, Cargo e Código do Funcionário (ex.: João da Silva, Gerente, 123456).</p>
+            <p><strong>2.</strong> Usando a função <code>ESQUERDA</code>, extraia os primeiros nomes (ex.: João).</p>
+            <p><strong>3.</strong> Utilize <code>DIREITA</code> para retornar os últimos 3 dígitos do código do funcionário.</p>
+            <p><strong>4.</strong> Adicione uma coluna para concatenar o Nome Completo e o Cargo. Utilize as funções <code>CONCAT</code> ou <code>UNIRTEXTO</code> para criar uma frase como: "João da Silva é Gerente.".</p>
         </div>
-        <div class="menu-item" id="a04">
-            <h3>Aula 04</h3>
+
+        <!-- Aula 3 -->
+        <div class="activity">
+            <h2>Aula 3: Funções Lógicas</h2>
+            <p><strong>1.</strong> Crie uma tabela com os seguintes dados: Nome do Aluno, Nota 1, Nota 2, Frequência (%), Situação.</p>
+            <p><strong>2.</strong> Calcule a média das notas usando a função <code>MÉDIA</code>.</p>
+            <p><strong>3.</strong> Na coluna Situação, utilize a função <code>SE</code> combinada com <code>E</code> para determinar se o aluno foi aprovado. Condição: Média ≥ 7 e Frequência ≥ 75%.</p>
         </div>
-        <div class="menu-item" id="a05">
-            <h3>Aula 05</h3>
+
+        <!-- Aula 4 -->
+        <div class="activity">
+            <h2>Aula 4: Funções de Matemática e Estatística</h2>
+            <p><strong>1.</strong> Crie uma tabela com as colunas: Produto, Categoria, Preço e Quantidade Vendida. Preencha com ao menos 8 linhas de dados.</p>
+            <p><strong>2.</strong> Adicione uma coluna para calcular a Receita de cada produto: <code>=Preço * Quantidade</code>.</p>
+            <p><strong>3.</strong> Use a função <code>SOMASE</code> para somar as Receitas separadamente por Categoria.</p>
+            <p><strong>4.</strong> Utilize <code>CONT.SE</code> para contar quantos produtos pertencem a uma categoria específica.</p>
         </div>
-        <div class="menu-item" id="a06">
-            <h3>Aula 06</h3>
+
+        <!-- Aula 5 -->
+        <div class="activity">
+            <h2>Aula 5: Funções Estatísticas</h2>
+            <p><strong>1.</strong> Monte uma tabela com dados de uma pesquisa: Nome, Gênero, Idade e se comprou (Sim ou Não).</p>
+            <p><strong>2.</strong> Use a função <code>CONT.VALORES</code> para contar quantos participaram da pesquisa.</p>
+            <p><strong>3.</strong> Utilize <code>CONT.NÚM</code> para contar quantas idades foram registradas e <code>MÉDIA</code> para calcular a idade média.</p>
+            <p><strong>4.</strong> Descubra a maior idade entre os que compraram algo utilizando <code>MÁXIMOSES</code>.</p>
         </div>
-        <div class="menu-item" id="a07">
-            <h3>Aula 07</h3>
+
+        <!-- Aula 6 -->
+        <div class="activity">
+            <h2>Aula 6: Funções de Data e Hora</h2>
+            <p><strong>1.</strong> Crie uma planilha com as colunas: Cliente, Data do Pedido, Prazo de Entrega (em dias) e Data de Entrega.</p>
+            <p><strong>2.</strong> Use a função <code>HOJE</code> para obter a data atual e <code>DIATRABALHO</code> para calcular a Data de Entrega.</p>
+            <p><strong>3.</strong> Adicione uma coluna para verificar se o pedido está atrasado: <code>SE(Data de Entrega > HOJE(); "Atrasado"; "No Prazo")</code>.</p>
         </div>
-        <div class="menu-item" id="a08">
-            <h3>Aula 08</h3>
+
+        <!-- Aula 7 -->
+        <div class="activity">
+            <h2>Aula 7: Auditoria de Fórmulas</h2>
+            <p><strong>1.</strong> Crie uma tabela com Receita e Despesas e calcule o Lucro (<code>Receita - Despesas</code>).</p>
+            <p><strong>2.</strong> Use as ferramentas de rastreamento de precedentes e dependentes para identificar possíveis erros.</p>
+            <p><strong>3.</strong> Aplique a função <code>SEERRO</code> para substituir erros nas fórmulas por "Valor Inválido".</p>
         </div>
-        <div class="menu-item" id="a09">
-            <h3>Aula 09</h3>
+
+        <!-- Aula 8 -->
+        <div class="activity">
+            <h2>Aula 8: Funções de Pesquisa e Referência</h2>
+            <p><strong>1.</strong> Monte uma tabela com os dados: Código, Nome do Funcionário, Departamento e Salário.</p>
+            <p><strong>2.</strong> Use <code>PROCV</code> para buscar o Departamento e o Salário com base no Código do Funcionário.</p>
+            <p><strong>3.</strong> Crie uma tabela auxiliar com aumentos salariais e utilize <code>ÍNDICE</code> e <code>CORRESP</code> para buscar os valores de aumento.</p>
         </div>
-        <div class="menu-item" id="a10">
-            <h3>Aula 10</h3>
-        </div>
-        <div class="menu-item" id="a11">
-            <h3>Aula 11</h3>
-        </div>
-        <div class="menu-item" id="a12">
-            <h3>Aula 12</h3>
-        </div>
-        <div class="menu-item" id="a13">
-            <h3>Aula 13</h3>
-        </div>
-        <div class="menu-item" id="a14">
-            <h3>Aula 14</h3>
-        </div> -->
+
+       <!-- Aula 9 -->
+    <div class="activity">
+        <h2>Aula 9: Tabela Dinâmica e Formatação Condicional</h2>
+        <p><strong>1.</strong> Crie uma tabela com os seguintes dados: Produto, Região, Mês, Quantidade Vendida e Receita.</p>
+        <p><strong>2.</strong> Preencha a tabela com pelo menos 20 registros fictícios, variando os produtos, regiões e meses.</p>
+        <p><strong>3.</strong> Insira uma Tabela Dinâmica que mostre a soma das Receitas por Região e Produto.</p>
+        <p><strong>4.</strong> Adicione uma Formatação Condicional para destacar produtos cuja Receita seja maior que R$ 10.000.</p>
     </div>
 
-<script>
-    // Botão voltar
-    const clickableBack = document.getElementById('IdIcon');
-    clickableBack.addEventListener('click', function() {
-        window.location.href = '../menu.html';
-    });
+    <!-- Aula 10 -->
+    <div class="activity">
+        <h2>Aula 10: Gráfico Dinâmico</h2>
+        <p><strong>1.</strong> A partir da tabela dinâmica criada na Aula 9, crie um Gráfico Dinâmico que exiba a Receita por Produto e Região.</p>
+        <p><strong>2.</strong> Personalize o gráfico, alterando o título e adicionando rótulos de dados.</p>
+        <p><strong>3.</strong> Adicione Segmentações para permitir filtros interativos, como por Região e Mês.</p>
+    </div>
 
-    // Acessar PDF
-    const clickablePdf01 = document.getElementById('a01');
-    clickablePdf01.addEventListener('click', function() {
-        window.location.href = 'https://www.youtube.com/watch?v=_UY0Fg7z5Qk&t=400s';
-    });
-    const clickablePdf02 = document.getElementById('a02');
-    clickablePdf02.addEventListener('click', function() {
-        window.location.href = './documents/avancado/2.pdf';
-    });
-    const clickablePdf03 = document.getElementById('a03');
-    clickablePdf03.addEventListener('click', function() {
-        window.location.href = './documents/avancado/3.pdf';
-    });
-    const clickablePdf04 = document.getElementById('a04');
-    clickablePdf04.addEventListener('click', function() {
-        window.location.href = './documents/avancado/4.pdf';
-    });
-    const clickablePdf05 = document.getElementById('a05');
-    clickablePdf05.addEventListener('click', function() {
-        window.location.href = './documents/avancado/5.pdf';
-    });
-    const clickablePdf06 = document.getElementById('a06');
-    clickablePdf06.addEventListener('click', function() {
-        window.location.href = './documents/avancado/6.pdf';
-    });
-    const clickablePdf07 = document.getElementById('a07');
-    clickablePdf07.addEventListener('click', function() {
-        window.location.href = './documents/avancado/7.pdf';
-    });
-    const clickablePdf08 = document.getElementById('a08');
-    clickablePdf08.addEventListener('click', function() {
-        window.location.href = './documents/avancado/8.pdf';
-    });
-    const clickablePdf09 = document.getElementById('a09');
-    clickablePdf09.addEventListener('click', function() {
-        window.location.href = './documents/avancado/9.pdf';
-    });
-    const clickablePdf10 = document.getElementById('a10');
-    clickablePdf10.addEventListener('click', function() {
-        window.location.href = './documents/avancado/10.pdf';
-    });
-    const clickablePdf11 = document.getElementById('a11');
-    clickablePdf11.addEventListener('click', function() {
-        window.location.href = './documents/avancado/11.pdf';
-    });
-    const clickablePdf12 = document.getElementById('a12');
-    clickablePdf12.addEventListener('click', function() {
-        window.location.href = './documents/avancado/12.pdf';
-    });
-    const clickablePdf13 = document.getElementById('a13');
-    clickablePdf13.addEventListener('click', function() {
-        window.location.href = './documents/avancado/13.pdf';
-    });
-    const clickablePdf14 = document.getElementById('a14');
-    clickablePdf14.addEventListener('click', function() {
-        window.location.href = './documents/avancado/14.pdf';
-    });
+    <!-- Aula 11 -->
+    <div class="activity">
+        <h2>Aula 11: Utilizando Formulários</h2>
+        <p><strong>1.</strong> Crie uma planilha para registrar solicitações de suporte técnico com as colunas: Nome, Departamento, Data da Solicitação, Prioridade e Status.</p>
+        <p><strong>2.</strong> Habilite a guia Desenvolvedor no Excel e crie um Formulário que permita inserir dados diretamente na planilha.</p>
+        <p><strong>3.</strong> Utilize validação de dados para as colunas "Prioridade" (opções: Alta, Média, Baixa) e "Status" (opções: Aberto, Fechado).</p>
+    </div>
 
-</script>
+    <!-- Aula 12 -->
+    <div class="activity">
+        <h2>Aula 12: Macros e VBA</h2>
+        <p><strong>1.</strong> Grave uma Macro que formate automaticamente uma tabela de vendas, aplicando bordas, preenchimento de cabeçalhos com cor e alinhamento centralizado.</p>
+        <p><strong>2.</strong> Insira um botão na planilha para executar a Macro criada.</p>
+        <p><strong>3.</strong> No VBA, crie um código que insira a data e hora atual em uma célula específica ao clicar em outro botão.</p>
+    </div>
+
+    <!-- Aula 13 -->
+    <div class="activity">
+        <h2>Aula 13: Solver e Funções Financeiras</h2>
+        <p><strong>1.</strong> Crie uma tabela para simular um financiamento com as colunas: Valor do Empréstimo, Taxa de Juros Mensal (%), Número de Parcelas e Valor da Parcela.</p>
+        <p><strong>2.</strong> Use a função <code>PGTO</code> para calcular o valor da parcela com base nos dados fornecidos.</p>
+        <p><strong>3.</strong> Utilize o Solver para ajustar o número de parcelas de forma que o valor total pago não ultrapasse R$ 50.000.</p>
+    </div>
 </body>
 </html>
