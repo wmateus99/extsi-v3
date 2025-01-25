@@ -7,6 +7,61 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Revisão | Essencial</title>
     <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
+
+    <style>
+        :root {
+            --main-color: #BB86FC;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1F1F1F;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--main-color);
+        }
+        header h1 {
+            margin: 0;
+            color: var(--main-color);
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .activity {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #1E1E1E;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .activity h2 {
+            color: var(--main-color);
+            border-bottom: 1px solid var(--main-color);
+            padding-bottom: 10px;
+        }
+        .activity p {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1F1F1F;
+            border-top: 2px solid var(--main-color);
+        }
+        footer p {
+            margin: 0;
+            color: #757575;
+        }
+    </style>
 </head>
 <body>
     <div class="icon-voltar" id="IdIcon">
@@ -17,116 +72,100 @@
     </div>
 
     <div class="container">
-        <!-- Menu -->
-        <div class="menu-item" id="a01">
-            <h3>Em Desenvolvimento</h3>
-        </div> <!--
-        <div class="menu-item" id="a02">
-            <h3>Aula 02</h3>
+
+        <!-- Aula 1 -->
+        <div class="activity">
+            <h2>Aula 1: Introdução ao Editor de Planilhas</h2>
+            <p><strong>Questão:</strong> Crie uma planilha que organize as despesas mensais de uma residência. Insira colunas para "Tipo de Despesa" (ex.: Aluguel, Luz), "Valor" e "Vencimento". Formate as células com:</p>
+            <ul>
+                <li>Cor de preenchimento para os cabeçalhos.</li>
+                <li>Formato de moeda para os valores.</li>
+                <li>Data abreviada para as colunas de vencimento.</li>
+            </ul>
         </div>
-        <div class="menu-item" id="a03">
-            <h3>Aula 03</h3>
+
+        <!-- Aula 2 -->
+        <div class="activity">
+            <h2>Aula 2: Operadores Matemáticos</h2>
+            <p><strong>Questão:</strong> Elabore uma tabela para calcular o preço final de produtos após a aplicação de impostos e descontos. Inclua colunas para "Preço Bruto", "% Imposto", "% Desconto" e "Preço Final". Utilize fórmulas para calcular o preço final com a seguinte lógica:</p>
+            <ul>
+                <li>Preço Final = Preço Bruto + (Preço Bruto * % Imposto) - (Preço Bruto * % Desconto).</li>
+            </ul>
         </div>
-        <div class="menu-item" id="a04">
-            <h3>Aula 04</h3>
+
+        <!-- Aula 3 -->
+        <div class="activity">
+            <h2>Aula 3: Subtração, Multiplicação e Divisão</h2>
+            <p><strong>Questão:</strong> Desenvolva uma planilha que simule a divisão de despesas entre amigos após um jantar. Adicione colunas para "Nome", "Valor Gasto" e "Divisão". A coluna "Divisão" deve calcular quanto cada amigo deve pagar proporcionalmente ao valor gasto.</p>
         </div>
-        <div class="menu-item" id="a05">
-            <h3>Aula 05</h3>
+
+        <!-- Aula 4 -->
+        <div class="activity">
+            <h2>Aula 4: Funções Básicas (Média, Mínimo, Máximo)</h2>
+            <p><strong>Questão:</strong> Monte uma planilha que registre as notas de 5 alunos em 3 provas. Inclua colunas para "Nome do Aluno", "Nota 1", "Nota 2", "Nota 3" e "Média Final". Utilize a função <code>MÉDIA</code> para calcular a média final e destaque o aluno com a maior nota usando a função <code>MÁXIMO</code>.</p>
         </div>
-        <div class="menu-item" id="a06">
-            <h3>Aula 06</h3>
+
+        <!-- Aula 5 -->
+        <div class="activity">
+            <h2>Aula 5: Formatação de Planilhas</h2>
+            <p><strong>Questão:</strong> Crie uma planilha com as vendas diárias de um vendedor durante uma semana. Insira colunas para "Dia da Semana", "Produto", "Quantidade Vendida" e "Valor Total". Formate a planilha com bordas, cores para os cabeçalhos e aplique o estilo moeda na coluna "Valor Total".</p>
         </div>
-        <div class="menu-item" id="a07">
-            <h3>Aula 07</h3>
+
+        <!-- Aula 6 -->
+        <div class="activity">
+            <h2>Aula 6: Gráficos no Excel</h2>
+            <p><strong>Questão:</strong> Registre os dados de vendas de 4 produtos ao longo de 6 meses em uma planilha. Crie um gráfico de colunas que mostre o total de vendas por produto.</p>
         </div>
-        <div class="menu-item" id="a08">
-            <h3>Aula 08</h3>
+
+        <!-- Aula 7 -->
+        <div class="activity">
+            <h2>Aula 7: Funções de Pesquisa</h2>
+            <p><strong>Questão:</strong> Monte uma tabela com os dados de funcionários (ID, Nome, Departamento e Salário). Utilize a função <code>PROCV</code> para buscar informações de um funcionário com base no ID informado.</p>
         </div>
-        <div class="menu-item" id="a09">
-            <h3>Aula 09</h3>
+
+        <!-- Aula 8 -->
+        <div class="activity">
+            <h2>Aula 8: Classificação e Filtros</h2>
+            <p><strong>Questão:</strong> Crie uma planilha com uma lista de 10 produtos, incluindo informações como "Nome", "Categoria", "Preço" e "Quantidade em Estoque". Classifique os produtos por preço em ordem decrescente e aplique um filtro para exibir apenas os produtos da categoria "Eletrônicos".</p>
         </div>
-        <div class="menu-item" id="a10">
-            <h3>Aula 10</h3>
+
+        <!-- Aula 9 -->
+        <div class="activity">
+            <h2>Aula 9: Validação de Dados</h2>
+            <p><strong>Questão:</strong> Construa uma planilha de registro de pedidos com colunas para "Número do Pedido", "Cliente", "Data" e "Status". Adicione validação de dados na coluna "Status" para que seja possível selecionar apenas as opções "Pendente", "Em Andamento" ou "Concluído".</p>
         </div>
-        <div class="menu-item" id="a11">
-            <h3>Aula 11</h3>
+
+        <!-- Aula 10 -->
+        <div class="activity">
+            <h2>Aula 10: Funções Lógicas</h2>
+            <p><strong>Questão:</strong> Crie uma tabela para verificar a aprovação de alunos em um curso. Insira colunas para "Nome", "Nota Final" e "Situação". Utilize a função <code>SE</code> para preencher automaticamente a situação com "Aprovado" se a nota for maior ou igual a 7, e "Reprovado" caso contrário.</p>
         </div>
-        <div class="menu-item" id="a12">
-            <h3>Aula 12</h3>
+
+        <!-- Aula 11 -->
+        <div class="activity">
+            <h2>Aula 11: Proteção de Planilhas</h2>
+            <p><strong>Questão:</strong> Monte uma planilha para controle financeiro com colunas para "Categoria", "Descrição", "Valor" e "Data". Proteja a planilha de modo que apenas as células de "Valor" possam ser editadas.</p>
         </div>
-        <div class="menu-item" id="a13">
-            <h3>Aula 13</h3>
+
+        <!-- Aula 12 -->
+        <div class="activity">
+            <h2>Aula 12: Importação de Dados</h2>
+            <p><strong>Questão:</strong> Importe um arquivo CSV contendo informações de vendas e organize os dados em uma nova planilha. Aplique formatação condicional para destacar vendas acima de R$ 1.000.</p>
         </div>
-        <div class="menu-item" id="a14">
-            <h3>Aula 14</h3>
-        </div> -->
+
+        <!-- Aula 13 -->
+        <div class="activity">
+            <h2>Aula 13: Introdução ao VBA</h2>
+            <p><strong>Questão:</strong> Grave uma macro que insira automaticamente a data e a hora atual em uma célula selecionada ao pressionar um botão.</p>
+        </div>
+
+        <!-- Aula 14 -->
+        <div class="activity">
+            <h2>Aula 14: Automatizando Relatórios</h2>
+            <p><strong>Questão:</strong> Crie um relatório automatizado que consolide os dados de vendas de várias planilhas em uma única tabela dinâmica. Insira um gráfico baseado na tabela dinâmica gerada.</p>
+        </div>
+
     </div>
-
-<script>
-    // Botão voltar
-    const clickableBack = document.getElementById('IdIcon');
-    clickableBack.addEventListener('click', function() {
-        window.location.href = '../menu.html';
-    });
-
-    // Acessar PDF
-    const clickablePdf01 = document.getElementById('a01');
-    clickablePdf01.addEventListener('click', function() {
-        window.location.href = 'https://www.youtube.com/watch?v=_UY0Fg7z5Qk&t=400s';
-    });
-    const clickablePdf02 = document.getElementById('a02');
-    clickablePdf02.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/2.pdf';
-    });
-    const clickablePdf03 = document.getElementById('a03');
-    clickablePdf03.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/3.pdf';
-    });
-    const clickablePdf04 = document.getElementById('a04');
-    clickablePdf04.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/4.pdf';
-    });
-    const clickablePdf05 = document.getElementById('a05');
-    clickablePdf05.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/5.pdf';
-    });
-    const clickablePdf06 = document.getElementById('a06');
-    clickablePdf06.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/6.pdf';
-    });
-    const clickablePdf07 = document.getElementById('a07');
-    clickablePdf07.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/7.pdf';
-    });
-    const clickablePdf08 = document.getElementById('a08');
-    clickablePdf08.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/8.pdf';
-    });
-    const clickablePdf09 = document.getElementById('a09');
-    clickablePdf09.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/9.pdf';
-    });
-    const clickablePdf10 = document.getElementById('a10');
-    clickablePdf10.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/10.pdf';
-    });
-    const clickablePdf11 = document.getElementById('a11');
-    clickablePdf11.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/11.pdf';
-    });
-    const clickablePdf12 = document.getElementById('a12');
-    clickablePdf12.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/12.pdf';
-    });
-    const clickablePdf13 = document.getElementById('a13');
-    clickablePdf13.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/13.pdf';
-    });
-    const clickablePdf14 = document.getElementById('a14');
-    clickablePdf14.addEventListener('click', function() {
-        window.location.href = './documents/esssencial/14.pdf';
-    });
-
 </script>
 </body>
 </html>
