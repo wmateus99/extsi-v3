@@ -65,6 +65,15 @@
                     <h2>Atividades</h2>
                 </div>
             </div>
+
+            <div class="cards" id="CardRv">
+                <div class="cardTop">
+                    <img src="img/preenchendo-formulario.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Revisão</h2>
+                </div>
+            </div>
             
             <div class="cards" id="CardAx">
                 <div class="cardTop">
@@ -159,6 +168,13 @@
     });
     clickableCardAt1.addEventListener('click', function() {
         window.location.href = './atividades/menu.html';
+    });
+
+    // Revisão
+    const clickableCardRv = document.getElementById('CardRv');
+
+    clickableCardRv.addEventListener('click', function() {
+        window.location.href = './revisao/index.html';
     });
 
     // Auxiliares
