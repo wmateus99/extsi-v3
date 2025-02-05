@@ -16,7 +16,7 @@ body {
 }
 
 .sub-conteiner {
-    width: 350px;
+    width: 380px;
     background-color: #1f2840;
     padding: 20px;
     border-radius: 8px;
@@ -52,13 +52,15 @@ h1 {
 
 .word-display span {
     margin: 0 1px;
+    font-size: 35px;
 }
 
 .word-input {
     width: 250px;
     text-align: center;
     padding: 10px;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 25px;
     border: 2px solid #ccc;
     border-radius: 4px;
 }
