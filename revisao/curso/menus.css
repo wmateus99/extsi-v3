@@ -1,0 +1,43 @@
+.aulas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50PX;
+    width: 100%;
+}
+
+.aula-card {
+    background-color: #00bf63;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.aula-card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.aula-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.aula-card button {
+    background-color: var(--cor-destaque);
+    border: none;
+    padding: 10px 20px;
+    color: var(--cor-texto-claro);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.aula-card button:hover {
+    background-color: #e55b00;
+}
+
+.aula-card:hover {
+    transform: scale(1.05);
+}
