@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="criador" style="display: NONE;">
-        <span>Site desenvolvido por: WANDERSON MATEUS</span>
+        <span>Site desenvolvido por: WANDERSON MATEUS - ig@w_mateus99</span>
     </div>
     <div class="header">
         <img src="img/logotsi.png" alt="">
@@ -20,13 +20,22 @@
     
     <div class="container">
         <div class="pc-conteiner">
-            <div class="cards" >
+            <div class="cards" style="display: none;" >
                 <div class="cardTop" id="CardFor">
                     <img src="img/preenchendo-formulario.png" alt="">
                 </div>
                 <div class="cardBottom">
                     <!-- <h2>Formulário</h2> -->
                     <h2>Em Breve</h2>
+                </div>
+            </div>
+
+            <div class="cards" id="CardD1">
+                <div class="cardTop d1">
+                    <img src="img/numero-1.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>1ª Aula</h2>
                 </div>
             </div>
 
@@ -102,14 +111,8 @@
             <div class="menu-item" id="CardDg1">
                 <h3>Digitação</h3>
             </div>
-            <div class="menu-item" id="CardJg1">
-                <h3>Jogos</h3>
-            </div>
             <div class="menu-item" id="CardAt1">
                 <h3>Atividades</h3>
-            </div>
-            <div class="menu-item" id="CardAx1">
-                <h3>Auxiliares</h3>
             </div>
             <div class="menu-item" id="CardTsi1">
                 <h3>Tsi Flix</h3>
@@ -125,6 +128,13 @@
 	});
 
 // Compartilhamento 
+
+    // Dia 1
+    const clickableCardD1 = document.getElementById('CardD1');
+
+    clickableCardD1.addEventListener('click', function() {
+        window.location.href = './inicio/game-typing/index.html';
+    });
 
     // Excel
     const clickableCardEx = document.getElementById('CardEx');
@@ -150,12 +160,8 @@
 
     // Jogos
     const clickableCardJg = document.getElementById('CardJg');
-    const clickableCardJg1 = document.getElementById('CardJg1');
 
     clickableCardJg.addEventListener('click', function() {
-        window.location.href = './jogos/menu.html';
-    });
-    clickableCardJg1.addEventListener('click', function() {
         window.location.href = './jogos/menu.html';
     });
 
@@ -179,12 +185,8 @@
 
     // Auxiliares
     const clickableCardAx = document.getElementById('CardAx');
-    const clickableCardAx1 = document.getElementById('CardAx1');
 
     clickableCardAx.addEventListener('click', function() {
-        window.location.href = './auxiliares/menu.html';
-    });
-    clickableCardAx1.addEventListener('click', function() {
         window.location.href = './auxiliares/menu.html';
     });
 

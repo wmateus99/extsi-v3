@@ -7,6 +7,10 @@
     font-family: "Comfortaa", sans-serif;
 }
 
+body {
+    
+}
+
 .header {
     display: flex;
     height: 100px;
@@ -80,11 +84,27 @@
     perspective: 1000px;
     align-items: center;
     justify-content: center;
-    background-color: #00bf63;
+    /* background-color: #00bf63; */
     transform-style: preserve-3d;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+
+
+    background: radial-gradient(circle, #00bf63, #00a24b, #008d3e, #007637, #00602a);
+    background: linear-gradient(135deg, rgba(0, 191, 99, 1) 0%, rgba(0, 179, 84, 0.9) 25%, rgba(0, 167, 70, 0.8) 50%, rgba(0, 155, 56, 0.7) 75%, rgba(0, 143, 42, 0.6) 100%);
+    background: repeating-linear-gradient(45deg, #00bf63, #00a24b 10%, #008d3e 20%, #00a24b 30%, #00bf63 40%);
+    background: linear-gradient(45deg, #00bf63 10%, #00a24b 30%, #008d3e 50%, #007637 70%, #00602a 90%);
+
 }
+
+.d1 {
+    background: radial-gradient(circle, #ffcc00, #ff9900, #cc7a00, #b56c00, #996300);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 1) 0%, rgba(255, 204, 0, 0.9) 25%, rgba(255, 186, 0, 0.8) 50%, rgba(255, 165, 0, 0.7) 75%, rgba(255, 140, 0, 0.6) 100%);
+        background: repeating-linear-gradient(45deg, #ffd700, #ffcc00 10%, #ffb300 20%, #ffcc00 30%, #ffd700 40%);
+background: linear-gradient(45deg, #f8d03c 10%, #e8b732 30%, #d79b28 50%, #c88b1e 70%, #b77a14 90%);
+}
+
+
 .cardTop img {
     width: 100px;
     transition: .3s ease;
@@ -134,5 +154,9 @@
 
 
 #CardFor {
-    background: #623C80;
+    /* background: #623C80; */
+    background: radial-gradient(circle, #623c80, #5a3272, #4b2a64, #3e2158, #31184c);
+    background: linear-gradient(135deg, rgba(98, 60, 128, 1) 0%, rgba(90, 50, 114, 0.9) 25%, rgba(75, 42, 100, 0.8) 50%, rgba(62, 33, 88, 0.7) 75%, rgba(49, 24, 76, 0.6) 100%);
+    background: repeating-linear-gradient(45deg, #623c80, #5a3272 10%, #4b2a64 20%, #5a3272 30%, #623c80 40%);
+    background: linear-gradient(45deg, #623c80 10%, #5a3272 30%, #4b2a64 50%, #3e2158 70%, #31184c 90%);
 }
