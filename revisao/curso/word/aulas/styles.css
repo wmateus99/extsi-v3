@@ -64,3 +64,13 @@ h1 {
         font-size: 1.3em;
     }
 }
+
+
+.pre {
+    color: #e74c3c;
+    width: 100%;
+    font-size: 100px;
+    font-style: italic;
+    text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

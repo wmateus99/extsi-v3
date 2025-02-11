@@ -1,0 +1,163 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Capturar as respostas do formulário
+    $respostas = [];
+    for ($i = 1; $i <= 11; $i++) {
+        $respostas[$i] = $_POST["resposta$i"];
+    }
+
+    // Gerar o PDF
+    require_once('tcpdf/tcpdf.php'); // Certifique-se de ter a biblioteca TCPDF instalada
+
+    $pdf = new TCPDF();
+    $pdf->AddPage();
+    $pdf->SetFont('helvetica', '', 12);
+
+    // Adicionar conteúdo ao PDF
+    $pdf->Cell(0, 10, 'Atividade: Componentes de um Computador', 0, 1, 'C');
+    foreach ($respostas as $key => $value) {
+        $pdf->Cell(0, 10, "Questão $key: $value", 0, 1);
+    }
+
+    // Salvar o PDF em um arquivo temporário
+    $pdf_file = '/tmp/atividade.pdf';
+    $pdf->Output($pdf_file, 'F');
+
+    // Enviar o PDF por e-mail
+    $to = 'email@exemplo.com'; // Substitua com o e-mail desejado
+    $subject = 'Prova Enviada';
+    $message = 'O aluno enviou a prova.';
+
+    $headers = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-Type: multipart/mixed; boundary="boundary"' . "\r\n";
+    $headers .= 'From: no-reply@seusite.com' . "\r\n";
+
+    // Corpos do e-mail e anexos
+    $body = '--boundary' . "\r\n";
+    $body .= 'Content-Type: text/plain; charset=UTF-8' . "\r\n\r\n";
+    $body .= $message . "\r\n";
+    $body .= '--boundary' . "\r\n";
+    $body .= 'Content-Type: application/pdf; name="atividade.pdf"' . "\r\n";
+    $body .= 'Content-Disposition: attachment; filename="atividade.pdf"' . "\r\n";
+    $body .= 'Content-Transfer-Encoding: base64' . "\r\n\r\n";
+    $body .= chunk_split(base64_encode(file_get_contents($pdf_file))) . "\r\n";
+    $body .= '--boundary--';
+
+    // Enviar e-mail
+    if (mail($to, $subject, $body, $headers)) {
+        echo 'Prova enviada com sucesso!';
+    } else {
+        echo 'Falha ao enviar a prova.';
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Atividade - Componentes de um Computador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Atividade: Componentes de um Computador</h1>
+        <p>Leia atentamente cada questão abaixo. Escreva uma breve descrição com suas próprias palavras para cada uma das questões. Não é uma prova, então sinta-se livre para pesquisar na internet ou em apostilas.</p>
+
+        <!-- Formulário para enviar as respostas -->
+        <form action="" method="POST">
+            <div class="question">
+                <label for="resposta1">1 - Descreva o que é a placa mãe e qual é a sua função principal:</label>
+                <textarea id="resposta1" name="resposta1" oninput="verificarProgresso('resposta1')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta1" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="resposta2">2 - Explique o papel da placa de vídeo em um computador:</label>
+                <textarea id="resposta2" name="resposta2" oninput="verificarProgresso('resposta2')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta2" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="resposta3">3 - O que é memória RAM?</label>
+                <textarea id="resposta3" name="resposta3" oninput="verificarProgresso('resposta3')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta3" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="resposta4">4 - Descreva a função do monitor de vídeo:</label>
+                <textarea id="resposta4" name="resposta4" oninput="verificarProgresso('resposta4')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta4" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="resposta5">5 - Explique o que são softwares:</label>
+                <textarea id="resposta5" name="resposta5" oninput="verificarProgresso('resposta5')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta5" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="resposta6">6 - Defina o termo hardware:</label>
+                <textarea id="resposta6" name="resposta6" oninput="verificarProgresso('resposta6')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta6" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="resposta7">7 - Cite dois exemplos de hardware e explique a função de cada um:</label>
+                <textarea id="resposta7" name="resposta7" oninput="verificarProgresso('resposta7')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta7" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="resposta8">8 - O que são dispositivos de entrada?</label>
+                <textarea id="resposta8" name="resposta8" oninput="verificarProgresso('resposta8')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta8" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="resposta9">9 - Cite um/dois dispositivo(s) de entrada que você usa e como eles ajudam nas suas tarefas:</label>
+                <textarea id="resposta9" name="resposta9" oninput="verificarProgresso('resposta9')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta9" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="resposta10">10 - Descreva o que são dispositivos de saída:</label>
+                <textarea id="resposta10" name="resposta10" oninput="verificarProgresso('resposta10')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta10" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="resposta11">11 - Dê exemplos de dispositivos de saída:</label>
+                <textarea id="resposta11" name="resposta11" oninput="verificarProgresso('resposta11')" required></textarea>
+                <div class="progress-container">
+                    <progress id="progress-resposta11" value="0" max="100"></progress>
+                </div>
+            </div>
+
+            <button type="submit" id="submit" disabled>Enviar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

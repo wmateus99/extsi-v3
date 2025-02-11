@@ -20,13 +20,13 @@
     
     <div class="container">
         <div class="pc-conteiner">
-            <div class="cards" style="display: none;" >
+            <div class="cards">
                 <div class="cardTop" id="CardFor">
                     <img src="img/preenchendo-formulario.png" alt="">
                 </div>
                 <div class="cardBottom">
-                    <!-- <h2>Formulário</h2> -->
-                    <h2>Em Breve</h2>
+                    <h2>Formulário</h2>
+                    <!-- <h2>Em Breve</h2> -->
                 </div>
             </div>
 
@@ -105,6 +105,9 @@
         <!-- Mobile -->
         <div class="mobile-container">
             <!-- Menu Essencial -->
+            <div class="menu-item" id="CardFor1">
+                <h3>Formulário</h3>
+            </div>
             <div class="menu-item" id="CardEx1">
                 <h3>Excel</h3>
             </div>
@@ -128,6 +131,17 @@
 	});
 
 // Compartilhamento 
+
+    // Excel
+    const clickableCardFor = document.getElementById('CardFor');
+    const clickableCardFor1 = document.getElementById('CardFor1');
+
+    clickableCardFor.addEventListener('click', function() {
+        window.location.href = 'https://forms.gle/ebKAnbzjM9t3C1ya6';
+    });
+    clickableCardFor1.addEventListener('click', function() {
+        window.location.href = 'https://forms.gle/ebKAnbzjM9t3C1ya6';
+    });
 
     // Dia 1
     const clickableCardD1 = document.getElementById('CardD1');
