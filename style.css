@@ -8,7 +8,14 @@
 }
 
 body {
-    
+    /* background: #dbffea; */
+    background: #fff;
+    /* background-color: #000; */
+    background-size: cover;
+}
+#particles-js {
+    position: absolute;
+    height: 100%;
 }
 
 .header {
