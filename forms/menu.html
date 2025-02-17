@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Comfortaa", sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .header {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header h1 {
+            /* margin-bottom: 20px; */
+        }
+
+
+    .icon-voltar {
+        top: 10px;
+        left: 10px;
+        position: absolute;
+    }
+    .icon-voltar img {
+        width: 50px;
+        cursor: pointer;
+    }
+
+
+    .menu-item {
+        width: 80%;
+        height: 50px;
+        color: #fff;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 20px;
+        overflow: hidden;
+        margin: 10px auto;
+        position: relative;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        background-color: #00c160;
+    }
+
+    .menu-item:hover {
+            height: 115px; /* Altura ao expandir para mostrar submenus */
+    }
+
+    .submenu-item {
+        background-color: white;
+        color: black;
+        font-size: 18px;
+        margin: 5px auto;
+        padding: 10px;
+        width: 70%;
+        border-radius: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Mostra os itens de submenu com transição suave */
+    .menu-item:hover .submenu-item {
+        opacity: 1;
+    }
+
+
+
+
+    @media screen and (min-width: 1050px) {
+        .menu-item {
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .icon-voltar {
+            display: none;
+        }
+        .header h1 {
+            font-size: 26px;
+        }
+        .menu-item {
+            height: 40px;
+        padding: 10px;
+            font-size: 16px;
+        }
+        .submenu-item {
+            font-size: 14px;
+            margin: 15px auto;
+            border-radius: 20px;
+        }
+    
+    }
+
+    video {
+        max-width: 600px;
+    }
+    </style>
+</head>
+<body>
+    <div class="icon-voltar" id="IdIcon">
+        <img src="../../img/voltar.png" alt="">
+    </div>
+
+    <div class="header">
+        <h1>Avaliação Final</h1>
+    </div>
+
+    <div class="container">
+        <!-- Menu Essencial -->
+        <div class="menu-item">Essencial
+            <div class="submenu-item" id="psEs">Iniciar Prova</div>
+        </div>
+
+        <!-- Menu Avançado -->
+        <div class="menu-item">Avançado
+            <div class="submenu-item" id="psAv">Iniciar Prova</div>
+        </div>
+
+<br>
+<br>
+
+        <h2>Assista o vídeo para ver as Proibições e Permições</h2>
+<br>
+        <video src="./src/regrasVD.mp4" controls poster="./src/TSi.png"></video>
+    </div>
+<br>
+<br>
+<script>
+    // Botão voltar
+    const clickableBack = document.getElementById('IdIcon');
+    clickableBack.addEventListener('click', function() {
+        window.location.href = '../index.html';
+    });
+    // Acessar menus - Avançado
+    const clickableAvPs = document.getElementById('psAv');
+    clickableAvPs.addEventListener('click', function() {
+        window.location.href = './embreve.html';
+    });
+
+    // Acessar menus - Essencial    
+    const clickableEsPs = document.getElementById('psEs');
+    clickableEsPs.addEventListener('click', function() {
+        window.location.href = 'https://forms.gle/CuxhQx6kDduJjHZLA';
+    });
+</script>
+</body>
+</html>

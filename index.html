@@ -40,6 +40,15 @@
                 </div>
             </div>
 
+            <div class="cards" id="CardPv">
+                <div class="cardTop Pv">
+                    <img src="img/prova-de-conceito.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Prova Final</h2>
+                </div>
+            </div>
+
             <div class="cards" id="CardEx">
                 <div class="cardTop">
                     <img src="img/excel.png" alt="">
@@ -149,11 +158,18 @@
         window.location.href = 'https://forms.gle/ebKAnbzjM9t3C1ya6';
     });
 
-    // Dia 1
+    // Dia 1 t
     const clickableCardD1 = document.getElementById('CardD1');
 
     clickableCardD1.addEventListener('click', function() {
         window.location.href = './inicio/game-typing/index.html';
+    });
+
+    // Prova Final
+    const clickableCardPv = document.getElementById('CardPv');
+
+    clickableCardPv.addEventListener('click', function() {
+        window.location.href = './forms/menu.html';
     });
 
     // Excel

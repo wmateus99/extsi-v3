@@ -160,7 +160,7 @@ background: linear-gradient(45deg, #f8d03c 10%, #e8b732 30%, #d79b28 50%, #c88b1
 }
 
 
-#CardFor {
+#CardFor, .Pv {
     /* background: #623C80; */
     background: radial-gradient(circle, #623c80, #5a3272, #4b2a64, #3e2158, #31184c);
     background: linear-gradient(135deg, rgba(98, 60, 128, 1) 0%, rgba(90, 50, 114, 0.9) 25%, rgba(75, 42, 100, 0.8) 50%, rgba(62, 33, 88, 0.7) 75%, rgba(49, 24, 76, 0.6) 100%);
