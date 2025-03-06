@@ -1,92 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <title>Terminal Animation</title>
-  <style>
-    button {
-      padding: 15px 30px;
-      font-size: 14px;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-      margin-top: 20px; /* Espaço entre os botões e o conteúdo acima */
-    }
-
-    .btn {
-      width: 40%;
-      gap: 20px;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    #sim {
-      background-color: #4CAF50;
-      color: white;
-      font-size: 16;
-    }
-
-    #sim:hover {
-      background-color: #45a049;
-    }
-
-    #nao {
-      background-color: #f44336;
-      color: white;
-      font-size: 16;
-      padding: 15px 30px;
-    }
-
-    #nao:hover {
-      background-color: #e53935;
-    }
-
-    .container {
-      text-align: center;
-      margin-top: 50px; /* Ajuste da posição do terminal */
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Escola Tsi</title>
+    <link rel="shortcut icon" href="./img/logo_ex-main.png" type="image/x-icon">
 </head>
-
 <body>
+    <div class="criador" style="display: NONE;">
+        <span>Site desenvolvido por: WANDERSON MATEUS - ig @w_mateus99</span>
+    </div>
+    <div class="header">
+        <!-- <div id="particles-js"></div> -->
+        <img src="img/banner_ex-tsi.png" alt="">
+        <h1>ATIVIDADES & DIVERSOS</h1>
+    </div>
+    
+    <div class="container">
+        <div class="pc-conteiner">
+            <div class="cards">
+                <div class="cardTop" id="CardFor">
+                    <img src="img/preenchendo-formulario.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Formulário</h2>
+                    <!-- <h2>Em Breve</h2> -->
+                </div>
+            </div>
 
-  <div class="container">
-    <div class="terminal">
-      <pre><p>Ops...</p><span>&nbsp;</span></pre>
-      <pre><p>Este site passou por uma grande mudança.  </p></pre>
-      <pre><p>Agora ele está com um visual totalmente novo.  </p></pre>
-      <pre><p>Você quer acessar ele agora?  </p></pre>
-      <pre><p>Clique em "Sim" para acessar direto.  </p></pre>
+            <div class="cards" id="CardD1">
+                <div class="cardTop d1">
+                    <img src="img/numero-1.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>1ª Aula</h2>
+                </div>
+            </div>
+
+            <div class="cards" id="CardPv">
+                <div class="cardTop Pv">
+                    <img src="img/prova-de-conceito.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Prova Final</h2>
+                </div>
+            </div>
+
+            <div class="cards" id="CardEx">
+                <div class="cardTop">
+                    <img src="img/excel.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Excel</h2>
+                </div>
+            </div>
+
+            <div class="cards" id="CardDg">
+                <div class="cardTop">
+                    <img src="img/digitacao.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Digitação</h2>
+                </div>
+            </div>
+
+            <div class="cards" id="CardJg">
+                <div class="cardTop" >
+                    <img src="img/controle-de-video-game.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Jogos</h2>
+                </div>
+            </div>
+
+            <div class="cards" id="CardAt">
+                <div class="cardTop">
+                    <img src="img/estudo-de-caso.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Atividades</h2>
+                </div>
+            </div>
+
+            <div class="cards" id="CardRv">
+                <div class="cardTop">
+                    <img src="img/preenchendo-formulario.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Revisão</h2>
+                </div>
+            </div>
+            
+            <div class="cards" id="CardAx">
+                <div class="cardTop">
+                    <img src="img/pasta-aberta.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Auxiliares</h2>
+                </div>
+            </div>
+
+            <div class="cards" id="CardTsi">
+                <div class="cardTop">
+                    <img id="tsi" src="img/TSI.png" alt="">
+                </div>
+                <div class="cardBottom">
+                    <h2>Tsi Flix</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile -->
+        <div class="mobile-container">
+            <!-- Menu Essencial -->
+            <div class="menu-item" id="CardFor1">
+                <h3>Formulário</h3>
+            </div>
+            <div class="menu-item" id="CardEx1">
+                <h3>Excel</h3>
+            </div>
+            <div class="menu-item" id="CardDg1">
+                <h3>Digitação</h3>
+            </div>
+            <div class="menu-item" id="CardAt1">
+                <h3>Atividades</h3>
+            </div>
+            <div class="menu-item" id="CardTsi1">
+                <h3>Tsi Flix</h3>
+            </div>
+        </div>
     </div>
 
-      <div class="btn">
-        <button id="sim" onclick="window.location.href='https://spacetsi.netlify.app/';">Sim</button>
-    <button id="nao">Não</button>
-      </div>
-    
-  </div>
+<script type="text/javascript" src="./particle/particles.js"></script>
+<script type="text/javascript" src="./particle/app.js"></script>
 
-  <script>
-    const btnNao = document.getElementById('nao');
 
-    btnNao.addEventListener('mouseenter', () => {
-      // Calcula a posição aleatória dentro da área visível da tela
-      const randomX = Math.random() * (window.innerWidth - btnNao.offsetWidth);
-      const randomY = Math.random() * (window.innerHeight - btnNao.offsetHeight);
-      
-      // Atualiza a posição do botão "Não", garantindo que ele não ultrapasse os limites da tela
-      btnNao.style.position = 'absolute';
-      btnNao.style.left = `${randomX}px`;
-      btnNao.style.top = `${randomY}px`;
+<script>
+    VanillaTilt.init(document.querySelectorAll(".cards"), {
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 0.5
+	});
+
+// Compartilhamento 
+
+    // Excel
+    const clickableCardFor = document.getElementById('CardFor');
+    const clickableCardFor1 = document.getElementById('CardFor1');
+
+    clickableCardFor.addEventListener('click', function() {
+        window.location.href = 'https://forms.gle/ebKAnbzjM9t3C1ya6';
     });
-  </script>
+    clickableCardFor1.addEventListener('click', function() {
+        window.location.href = 'https://forms.gle/ebKAnbzjM9t3C1ya6';
+    });
 
+    // Dia 1 t
+    const clickableCardD1 = document.getElementById('CardD1');
+
+    clickableCardD1.addEventListener('click', function() {
+        window.location.href = './inicio/game-typing/index.html';
+    });
+
+    // Prova Final
+    const clickableCardPv = document.getElementById('CardPv');
+
+    clickableCardPv.addEventListener('click', function() {
+        window.location.href = './forms/menu.html';
+    });
+
+    // Excel
+    const clickableCardEx = document.getElementById('CardEx');
+    const clickableCardEx1 = document.getElementById('CardEx1');
+
+    clickableCardEx.addEventListener('click', function() {
+        window.location.href = './excel/menu.html';
+    });
+    clickableCardEx1.addEventListener('click', function() {
+        window.location.href = './excel/menu.html';
+    });
+
+    // Digitação
+    const clickableCardDg = document.getElementById('CardDg');
+    const clickableCardDg1 = document.getElementById('CardDg1');
+
+    clickableCardDg.addEventListener('click', function() {
+        window.location.href = './digitacao/menu.html';
+    });
+    clickableCardDg1.addEventListener('click', function() {
+        window.location.href = './digitacao/menu.html';
+    });
+
+    // Jogos
+    const clickableCardJg = document.getElementById('CardJg');
+
+    clickableCardJg.addEventListener('click', function() {
+        window.location.href = './jogos/menu.html';
+    });
+
+    // Atividades
+    const clickableCardAt = document.getElementById('CardAt');
+    const clickableCardAt1 = document.getElementById('CardAt1');
+
+    clickableCardAt.addEventListener('click', function() {
+        window.location.href = './atividades/menu.html';
+    });
+    clickableCardAt1.addEventListener('click', function() {
+        window.location.href = './atividades/menu.html';
+    });
+
+    // Revisão
+    const clickableCardRv = document.getElementById('CardRv');
+
+    clickableCardRv.addEventListener('click', function() {
+        window.location.href = './revisao/index.html';
+    });
+
+    // Auxiliares
+    const clickableCardAx = document.getElementById('CardAx');
+
+    clickableCardAx.addEventListener('click', function() {
+        window.location.href = './auxiliares/menu.html';
+    });
+
+    // Tsi Flix
+    const clickableCardTsi = document.getElementById('CardTsi');
+    const clickableCardTsi1 = document.getElementById('CardTsi1');
+
+    clickableCardTsi.addEventListener('click', function() {
+        window.location.href = 'https://ead10.com.br/escolatsiinformatica/portal/access';
+    });
+    clickableCardTsi1.addEventListener('click', function() {
+        window.location.href = 'https://ead10.com.br/escolatsiinformatica/portal/access';
+    });
+</script>
 </body>
-
 </html>
